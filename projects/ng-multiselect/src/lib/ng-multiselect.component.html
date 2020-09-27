@@ -1,0 +1,30 @@
+<div class="multiselect" #multiselect>
+  <div class="multiselect-title" (click)="open = !open">
+    <span class="m-title">{{placeholder}}</span>
+    <span class="m-icon {{open? 'open': 'closed'}}"></span>
+    <br>
+    <div class="selected-items" *ngIf="!options.hide?.selectedItems">
+      <selected-item *ngFor="let item of selectedValues" [item]="formatter(item)" (close)="change(item)"></selected-item>
+    </div>
+  </div>
+  <div #content class="multiselect-content" *ngIf="open">
+    <div class="options" *ngIf="!options.hide?.search || !options.hide.selectionAll">
+      <input type="text" placeholder="Type to filter" [(ngModel)]="search" *ngIf="!options.hide?.search" autofocus>
+      <br>
+      <label *ngIf="search.length==0 &&  !options.hide?.selectionAll" class="custom-checkbox">
+        <input type="checkbox" [(ngModel)]="selectAll" (change)="selectAllOrUnselectAll()">
+        <span>
+          {{selectAll? unselectAllText : unselectAllText}}
+          <br>
+        </span>
+      </label>
+      <hr>
+    </div>
+    <div class="multiselect-items">
+      <label *ngFor="let item of filteredDataList()" class="multiselect-item custom-checkbox" [class.active]="isChecked(item)">
+        <input type="checkbox" [checked]="isChecked(item)" (change)="change(item)"/><span>{{formatter(item)}}</span>
+      </label>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,32 @@
+{
+  "name": "@antin502/ng-multiselect",
+  "version": "0.1.3-rc",
+  "description": "`ng-multiselect` is available via [npm](https://www.npmjs.com/package/@antin502/ng-multiselect)",
+  "main": "dist/bundles/ng-multiselect.umd.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladimirantin/ng-multiselect.git"
+  },
+  "keywords": [
+    "angular",
+    "angular 6",
+    "angular 7",
+    "angular 8",
+    "angular 9",
+    "angular 10",
+    "multiselect",
+    "module"
+  ],
+  "author": "Vladimir Antin <antin502@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladimirantin/ng-multiselect/issues"
+  },
+  "homepage": "https://github.com/vladimirantin/ng-multiselect#readme",
+  "peerDependencies": {
+    "@angular/common": "^9.0.7",
+    "@angular/core": "^9.0.7",
+    "@angular/forms": "^9.0.7",
+    "tslib": "^1.10.0"
+  }
+}
