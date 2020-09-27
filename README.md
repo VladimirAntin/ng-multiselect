@@ -1,27 +1,75 @@
-# NgMultiselect
+# Angular 9 Ng MultiSelect
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+## Installation
 
-## Development server
+`ng-multiselect` is available via [npm](https://www.npmjs.com/package/@antin502/ng-multiselect)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Using npm:
+```bash
+$ npm install @antin502/ng-multiselect --save
+```
 
-## Code scaffolding
+- Import NgMultiSelect to your AppModule
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+``` js
 
-## Build
+import { AppComponent } from './app.component';
+import {NgMultiselectModule} from '@antin502/ng-multiselect';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+@NgModule({
+    imports: [
+        ....,
+        NgMultiselectModule
+    ],
+    declarations: [
+        AppComponent
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
 
-## Running unit tests
+- Use it in your template
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+``` html
+      <ng-multiselect [dataList]="list"
+                      [compareWith]="compareWith"
+                      [(selectedValues)]="selected"
+                      [options]="{hide: {selectedItems: false, search: true, selectionAll: true}}"
+                      [formatter]="formatter"
+      select-all-text="" unselect-all-text="">
+      </ng-multiselect>
 
-## Running end-to-end tests
+```
+``` ts
+      ....
+      list = [];
+      selected = [{id: 1}];
+      title = 'ng-multiselect';
+    
+      formatter = (i) => i.text;
+      compareWith = (a) => a.id;
+    
+      ngOnInit(): void {
+        for (let i = 0; i < 100; i++) {
+          this.list.push({id: i, text: `id=${i}`});
+        }
+      }
+    
+    
+      log(e) {
+        console.log(e);
+      }
+      ....
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
 
-## Further help
+## Demo
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- [Working Demo](https://vladimirantin.github.io/projects/ng-multiselect)
+
+
+## Creator
+
+#### [Vladimir Antin](mailto:antin502@gmail.com)
+- [@GitHub](https://github.com/vladimirantin)
