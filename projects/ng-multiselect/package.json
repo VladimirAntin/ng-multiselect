@@ -1,6 +1,6 @@
 {
   "name": "@antin502/ng-multiselect",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "`ng-multiselect` is available via [npm](https://www.npmjs.com/package/@antin502/ng-multiselect)",
   "scripts": {
     "prepublishOnly": "npm install"
