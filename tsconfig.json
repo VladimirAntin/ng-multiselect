@@ -16,8 +16,7 @@
       "dom"
     ],
     "paths": {
-      "ng-multiselect": [
-        "dist/ng-multiselect/ng-multiselect",
+      "@antin502/ng-multiselect": [
         "dist/ng-multiselect"
       ]
     }
