@@ -26,8 +26,9 @@
   }
 
   .multiselect-content {
+    z-index: 100000;
     position: absolute;
-    background-color: gainsboro;
+    background-color: gainsboro !important;
     border: 0.2rem gainsboro solid;
     border-radius: 1rem;
 

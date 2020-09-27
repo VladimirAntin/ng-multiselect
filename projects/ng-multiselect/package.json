@@ -1,6 +1,6 @@
 {
   "name": "@antin502/ng-multiselect",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "`ng-multiselect` is available via [npm](https://www.npmjs.com/package/@antin502/ng-multiselect)",
   "scripts": {
     "prepublishOnly": "npm install"
@@ -28,7 +28,6 @@
   "peerDependencies": {
     "@angular/common": "^9.0.7",
     "@angular/core": "^9.0.7",
-    "@angular/forms": "^9.0.7",
-    "typescript": "~3.7.5"
+    "@angular/forms": "^9.0.7"
   }
 }
