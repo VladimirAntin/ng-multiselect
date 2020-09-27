@@ -8,7 +8,6 @@ import {AfterViewInit, Component, ElementRef, Input, ViewChild, EventEmitter, Ou
 export class NgMultiselectComponent implements AfterViewInit {
 
   open = false;
-  @ViewChild('content') content;
   @ViewChild('multiselect') multiselect: ElementRef<HTMLDivElement>;
   @Input() dataList: any[] = [];
   @Input() selectedValues = [];
@@ -35,6 +34,7 @@ export class NgMultiselectComponent implements AfterViewInit {
     const selected = [...this.selectedValues.map(this.compareWith)];
     this.selectedValues = this.dataList.filter(i => selected.includes(this.compareWith(i)));
     this.registerChange();
+    console.log(this.multiselect)
   }
 
   isChecked(i: any) {

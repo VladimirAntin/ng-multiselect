@@ -7,14 +7,14 @@
       <selected-item *ngFor="let item of selectedValues" [item]="formatter(item)" (close)="change(item)"></selected-item>
     </div>
   </div>
-  <div #content class="multiselect-content" *ngIf="open">
+  <div #content class="multiselect-content" *ngIf="open" [style.width.px]="multiselect.offsetWidth">
     <div class="options" *ngIf="!options.hide?.search || !options.hide.selectionAll">
       <input type="text" placeholder="Type to filter" [(ngModel)]="search" *ngIf="!options.hide?.search" autofocus>
       <br>
       <label *ngIf="search.length==0 &&  !options.hide?.selectionAll" class="custom-checkbox">
         <input type="checkbox" [(ngModel)]="selectAll" (change)="selectAllOrUnselectAll()">
         <span>
-          {{selectAll? unselectAllText : unselectAllText}}
+          {{selectAll? unselectAllText : selectAllText}}
           <br>
         </span>
       </label>

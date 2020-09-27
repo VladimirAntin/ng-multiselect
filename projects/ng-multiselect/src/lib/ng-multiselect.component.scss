@@ -26,7 +26,8 @@
   }
 
   .multiselect-content {
-    min-width: max-content;
+    position: absolute;
+    background-color: gainsboro;
     border: 0.2rem gainsboro solid;
     border-radius: 1rem;
 
